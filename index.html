@@ -460,6 +460,9 @@ footer strong{color:var(--dim)}
             <label for="field[46]">Qué te frustra del sitio web de tu constructora? <span style="font-weight:400;text-transform:none;letter-spacing:0">(opcional)</span></label>
             <textarea id="field[46]" name="field[46]" placeholder="Ej: los leads llegan sin contexto, el sitio no refleja los proyectos actuales, no sabemos qué funciona..."></textarea>
           </div>
+          <div class="_form_element _full_width" style="display:flex;justify-content:center;margin:8px 0">
+            <div class="g-recaptcha" data-sitekey="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go" data-theme="dark"></div>
+          </div>
           <div class="_button-wrapper form-cta">
             <button type="submit" id="_form_67_submit" class="cta-glass _submit" style="width:100%;justify-content:center;font-size:15px;padding:16px 24px">Quiero ver qué está fallando en mi sitio</button>
           </div>
@@ -509,6 +512,8 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 })();
 </script>
 
+<!-- reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <!-- Active Campaign form handler -->
 <script>
 window.cfields = {"5":"cargo","7":"compaia","46":"que_te_frustra","10":"utm_source","11":"utm_medium","12":"utm_campaing","21":"utmterm","31":"utmcontent","15":"fclid","22":"gclid","17":"lifatid","16":"fbcid","19":"form_name"};
