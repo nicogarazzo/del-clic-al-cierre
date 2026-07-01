@@ -409,39 +409,63 @@ footer strong{color:var(--dim)}
         <div class="cupos-track"><div class="cupos-fill" style="width:70%"></div></div>
       </div>
 
-      <form class="form-grid" onsubmit="return false">
-        <div class="row2">
-          <div>
-            <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <form method="POST" action="https://trespimedios21146.activehosted.com/proc.php" id="_form_67_" class="form-grid _form _form_67 _inline-form _dark" novalidate data-styles-version="5">
+        <!-- AC hidden fields -->
+        <input type="hidden" name="u" value="67">
+        <input type="hidden" name="f" value="67">
+        <input type="hidden" name="s">
+        <input type="hidden" name="c" value="0">
+        <input type="hidden" name="m" value="0">
+        <input type="hidden" name="act" value="sub">
+        <input type="hidden" name="v" value="2">
+        <input type="hidden" name="or" value="00366546-1387-4789-b014-ed82dc76f253">
+        <!-- UTM & tracking (hidden, auto-populated from URL) -->
+        <input type="hidden" name="field[10]" id="field_10">
+        <input type="hidden" name="field[11]" id="field_11">
+        <input type="hidden" name="field[12]" id="field_12">
+        <input type="hidden" name="field[21]" id="field_21">
+        <input type="hidden" name="field[31]" id="field_31">
+        <input type="hidden" name="field[15]" id="field_15">
+        <input type="hidden" name="field[22]" id="field_22">
+        <input type="hidden" name="field[17]" id="field_17">
+        <input type="hidden" name="field[16]" id="field_16">
+        <input type="hidden" name="field[19]" value="event-clic-al-cierre">
+
+        <div class="_form-content">
+          <div class="row2">
+            <div class="_form_element _full_width">
+              <label for="fullname">Nombre completo</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Tu nombre" required>
+            </div>
+            <div class="_form_element _full_width">
+              <label for="field[5]">Cargo</label>
+              <input type="text" id="field[5]" name="field[5]" placeholder="Director de Mercadeo">
+            </div>
           </div>
-          <div>
-            <label for="cargo">Cargo</label>
-            <input type="text" id="cargo" placeholder="Director de Mercadeo" required>
+          <div class="row2">
+            <div class="_form_element _full_width">
+              <label for="field[7]">Constructora / Empresa</label>
+              <input type="text" id="field[7]" name="field[7]" placeholder="Nombre de la empresa">
+            </div>
+            <div class="_form_element _full_width">
+              <label for="email">Email corporativo <span style="color:var(--red)">*</span></label>
+              <input type="text" id="email" name="email" placeholder="tu@constructora.com" required>
+            </div>
           </div>
-        </div>
-        <div class="row2">
-          <div>
-            <label for="empresa">Constructora / Empresa</label>
-            <input type="text" id="empresa" placeholder="Nombre de la empresa" required>
+          <div class="_form_element _full_width">
+            <label for="phone">Celular (WhatsApp)</label>
+            <input type="text" id="phone" name="phone" placeholder="+57 300 000 0000">
           </div>
-          <div>
-            <label for="email">Email corporativo</label>
-            <input type="email" id="email" placeholder="tu@constructora.com" required>
+          <div class="_form_element _full_width">
+            <label for="field[46]">Qué te frustra del sitio web de tu constructora? <span style="font-weight:400;text-transform:none;letter-spacing:0">(opcional)</span></label>
+            <textarea id="field[46]" name="field[46]" placeholder="Ej: los leads llegan sin contexto, el sitio no refleja los proyectos actuales, no sabemos qué funciona..."></textarea>
           </div>
+          <div class="_button-wrapper form-cta">
+            <button type="submit" id="_form_67_submit" class="cta-glass _submit" style="width:100%;justify-content:center;font-size:15px;padding:16px 24px">Quiero ver qué está fallando en mi sitio</button>
+          </div>
+          <p class="form-micro">30 cupos. Sin costo. No se graba. Si no asistes, tu cupo se reasigna. Confirmación por email con link de Google Meet y recordatorio 24h antes.</p>
         </div>
-        <div>
-          <label for="cel">Celular (WhatsApp)</label>
-          <input type="tel" id="cel" placeholder="+57 300 000 0000" required>
-        </div>
-        <div>
-          <label for="frustra">Que te frustra del sitio web de tu constructora? <span style="font-weight:400;text-transform:none;letter-spacing:0">(opcional)</span></label>
-          <textarea id="frustra" placeholder="Ej: los leads llegan sin contexto, el sitio no refleja los proyectos actuales, no sabemos que funciona..."></textarea>
-        </div>
-        <div class="form-cta">
-          <button type="submit" class="cta-glass">Quiero ver que esta fallando en mi sitio</button>
-        </div>
-        <p class="form-micro">30 cupos. Sin costo. No se graba. Si no asistes, tu cupo se reasigna. Confirmacion por email con link de Google Meet y recordatorio 24h antes.</p>
+        <div class="_form-thank-you" style="display:none;text-align:center;padding:40px 20px;color:var(--green);font-size:18px;font-weight:600"></div>
       </form>
     </div>
   </div>
@@ -471,11 +495,113 @@ footer strong{color:var(--dim)}
 </footer>
 
 <script>
-// Scroll reveal (lightweight, no library)
+// Scroll reveal
 const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Auto-populate UTM & tracking from URL params
+(function(){
+  var p = new URLSearchParams(window.location.search);
+  var map = {utm_source:'field_10',utm_medium:'field_11',utm_campaign:'field_12',utm_term:'field_21',utm_content:'field_31',fclid:'field_15',gclid:'field_22',li_fat_id:'field_17',fbclid:'field_16'};
+  for(var k in map){var v=p.get(k);if(v){var el=document.getElementById(map[k]);if(el)el.value=v;}}
+})();
+</script>
+
+<!-- Active Campaign form handler -->
+<script>
+window.cfields = {"5":"cargo","7":"compaia","46":"que_te_frustra","10":"utm_source","11":"utm_medium","12":"utm_campaing","21":"utmterm","31":"utmcontent","15":"fclid","22":"gclid","17":"lifatid","16":"fbcid","19":"form_name"};
+window._show_thank_you = function(id, message, trackcmp_url, email) {
+    var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+    form.querySelector('._form-content').style.display = 'none';
+    thank_you.innerHTML = message || '<div style="padding:32px 0"><div style="width:64px;height:64px;border-radius:50%;background:var(--green);margin:0 auto 16px;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p style="color:var(--white);font-size:20px;font-weight:700;margin-bottom:8px">Listo. Tu lugar está reservado.</p><p style="color:var(--dim);font-size:14px">Revisa tu email para la confirmación con el link de Google Meet.</p></div>';
+    thank_you.style.display = 'block';
+    const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+    var visitorObject = window[vgoAlias];
+    if (email && typeof visitorObject !== 'undefined') {
+        visitorObject('setEmail', email);
+        visitorObject('update');
+    } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+        _load_script(trackcmp_url);
+    }
+    if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+};
+window._show_error = function(id, message, html) {
+    var form = document.getElementById('_form_' + id + '_'),
+        err = document.createElement('div'),
+        button = form.querySelector('button[type="submit"]'),
+        old_error = form.querySelector('._form_error');
+    if (old_error) old_error.parentNode.removeChild(old_error);
+    err.innerHTML = message;
+    err.className = '_error-inner _form_error _no_arrow';
+    err.style.cssText = 'background:#FFDDDD;color:#000;padding:12px;border-radius:9px;margin-bottom:12px;font-size:13px;text-align:center';
+    button.parentNode.insertBefore(err, button);
+    var submitButton = form.querySelector('[id^="_form"][id$="_submit"]');
+    submitButton.disabled = false;
+    submitButton.classList.remove('processing');
+};
+window._load_script = function(url, callback, isSubmit) {
+    var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+    var submitButton = document.querySelector('#_form_67_submit');
+    script.charset = 'utf-8';
+    script.src = url;
+    if (callback) {
+        script.onload = script.onreadystatechange = function() {
+            if (!r && (!this.readyState || this.readyState == 'complete')) { r = true; callback(); }
+        };
+    }
+    script.onerror = function() {
+        if (isSubmit) {
+            _show_error("67", "Error en el envío. Intenta de nuevo.");
+            submitButton.disabled = false;
+            submitButton.classList.remove('processing');
+        }
+    }
+    head.appendChild(script);
+};
+(function() {
+    if (window.location.search.search("excludeform") !== -1) return false;
+    var form_to_submit = document.getElementById('_form_67_');
+    var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), submitted = false;
+
+    var validate_form = function(e) {
+        var no_error = true;
+        var email = form_to_submit.querySelector('[name="email"]');
+        var fullname = form_to_submit.querySelector('[name="fullname"]');
+        // Validate email
+        if (!email.value || !email.value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
+            email.style.borderColor = 'var(--red)';
+            no_error = false;
+        } else {
+            email.style.borderColor = '';
+        }
+        // Validate fullname
+        if (!fullname.value.trim()) {
+            fullname.style.borderColor = 'var(--red)';
+            no_error = false;
+        } else {
+            fullname.style.borderColor = '';
+        }
+        if (!no_error && e) e.preventDefault();
+        return no_error;
+    };
+
+    var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break}};return q.join("&")};
+
+    var form_submit = function(e) {
+        e.preventDefault();
+        if (validate_form()) {
+            var submitButton = e.target.querySelector('#_form_67_submit');
+            submitButton.disabled = true;
+            submitButton.classList.add('processing');
+            var serialized = _form_serialize(document.getElementById('_form_67_')).replace(/%0A/g, '\\n');
+            _load_script('https://trespimedios21146.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
+        }
+        return false;
+    };
+    form_to_submit.addEventListener('submit', form_submit);
+})();
 </script>
 </body>
 </html>
